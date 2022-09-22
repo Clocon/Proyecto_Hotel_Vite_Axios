@@ -25,15 +25,15 @@ const saludo =()=>{
   const today=new Date()
   const hora=today.getHours()
 
-  if(hora>=04 && hora<12){
+  if(hora>=4 && hora<12){
     document.querySelector("#saludo").innerHTML="Buenos días"
     document.getElementById("saludo").style.color =" #9ab755";
   }
-  if(hora>=12 && hora< 20){
+  if(hora>=12 && hora<20){
     document.querySelector("#saludo").innerHTML="Buenos tardes"
     document.getElementById("saludo").style.color ="#7e3333";
   }
-  if(hora>=20 || hora<04 ){
+  if(hora>=20 || hora<4){
     document.querySelector("#saludo").innerHTML="Buenos noches"
     document.getElementById("saludo").style.color ="#000"
 }}
