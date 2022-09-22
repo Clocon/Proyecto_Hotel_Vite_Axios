@@ -1,0 +1,152 @@
+/* Básico */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos a etiquetas */
+body{
+  background-color: #333;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+  font-size: 16px;
+  color: white;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  font-weight: bold;
+}
+
+p{
+  text-align:center;
+  margin: 10px;
+}
+
+h1, h2, h3{
+  text-align: center;
+  padding-bottom: 20px;
+  text-transform: capitalize
+}
+h1{
+  display: block;
+}
+
+/*  Clases */
+
+.inicio {
+  text-align: center;
+  background-image: url(../img/interiorhotel.jpg);
+  height: 500px;
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+}
+
+.inicio p{
+  padding: 30px;
+}
+
+.inicio h1{
+  font-size: 45px;
+  padding: 50px;
+}
+
+.info{
+  height: 400px;
+}
+
+.info aside{
+  background-image: url(../img/edificio.jpg);
+  width: 50%;
+  height: 100%;
+  background-position:left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.info article{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 100px 40px;
+}
+
+.logo{
+  padding-top: 20px;
+  font-size: 1.5em;
+  margin-left: 20px;
+}
+
+.navbar{
+  padding: 20px 20px 0 20px;
+}
+
+.navbar li{
+  display: inline;
+}
+
+.articulo{
+  width: 33.3333%;
+  background-color: white;
+  color: black;
+  
+}
+
+.articulo-naranja{
+  background-color:orange;
+}
+
+.btn1{
+  padding: 10px 15px;
+  background-color:#333;
+}
+
+.btn2{
+  padding: 10px 15px;
+  background-color: white;
+  color: black;
+}
+
+.fondo{
+  background-image: url(../img/fondo.jpg);
+  height: 100%;
+  background-position:left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.icons{
+  color:red;
+}
+
+
+/* Auxiliares */
+
+
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.clear{
+  clear: both;
+}
+
+.scroll{
+  overflow: auto;
+}
+
+.flex{
+  display: flex;
+}
+
