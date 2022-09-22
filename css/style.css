@@ -79,9 +79,30 @@ h1{
 }
 
 .logo{
+  text-align: left;
   padding-top: 20px;
   font-size: 1.5em;
   margin-left: 20px;
+  width: 33%;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 100,
+  'GRAD' 200,
+  'opsz' 48;
+  align-items: center;
+  display:inherit;
+  color: red;
+  text-align: center;
+}
+
+
+.saludo{
+  padding: 20px 20px 0 20px;
+  width: 33%;
 }
 
 .navbar{
@@ -122,10 +143,6 @@ h1{
   background-repeat: no-repeat;
 }
 
-.icons{
-  color:red;
-}
-
 
 /* Auxiliares */
 
@@ -150,3 +167,6 @@ h1{
   display: flex;
 }
 
+.center{
+  text-align: center;
+}
