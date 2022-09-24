@@ -19,7 +19,6 @@ async function GET(url){
   } 
 } 
 GET("https://practica-eoi.alexdw.com/contents")
-document.querySelector("#check").innerHTML="Checking ONLINE"
 
 const saludo =()=>{
   const today=new Date()
@@ -47,3 +46,10 @@ const saludo =()=>{
     cabeceroImg.style.backgroundSize = "cover"
 }}
 saludo()
+
+document.querySelector("#check").innerHTML="Checking ONLINE"
+const el = document.getElementById("check")
+el.onclick= ()=>{
+  console.log("hola mundo")
+}
+
