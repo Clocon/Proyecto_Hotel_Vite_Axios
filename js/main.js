@@ -23,7 +23,7 @@ document.querySelector("#check").innerHTML="Checking ONLINE"
 
 const saludo =()=>{
   const today=new Date()
-  const hora=21//today.getHours()
+  const hora=today.getHours()
   const cabeceroImg =document.getElementById("cabecero")
   const buenosX =document.querySelector("#saludo")
   const saludoColor =document.getElementById("saludo")
