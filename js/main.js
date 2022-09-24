@@ -23,18 +23,27 @@ document.querySelector("#check").innerHTML="Checking ONLINE"
 
 const saludo =()=>{
   const today=new Date()
-  const hora=today.getHours()
+  const hora=21//today.getHours()
+  const cabeceroImg =document.getElementById("cabecero")
+  const buenosX =document.querySelector("#saludo")
+  const saludoColor =document.getElementById("saludo")
 
   if(hora>=4 && hora<12){
-    document.querySelector("#saludo").innerHTML="Buenos días"
-    document.getElementById("saludo").style.color =" #9ab755";
+    buenosX.innerHTML="Buenos días"
+    saludoColor.style.color ="#9a993";
+    cabeceroImg.style.backgroundImage = "url(../img/bDias.jpg)"
+    cabeceroImg.style.backgroundSize = "cover"
   }
   if(hora>=12 && hora<20){
-    document.querySelector("#saludo").innerHTML="Buenos tardes"
-    document.getElementById("saludo").style.color ="#7e3333";
+    buenosX.innerHTML="Buenas tardes"
+    saludoColor.style.color ="#7e3333";
+    cabeceroImg.style.backgroundImage = "url(../img/bTardes.jpg)"
+    cabeceroImg.style.backgroundSize = "cover"
   }
   if(hora>=20 || hora<4){
-    document.querySelector("#saludo").innerHTML="Buenos noches"
-    document.getElementById("saludo").style.color ="#000"
+    buenosX.innerHTML="Buenas noches"
+    saludoColor.style.color ="#654"
+    cabeceroImg.style.backgroundImage = "url(../img/bNoches.jpg)"
+    cabeceroImg.style.backgroundSize = "cover"
 }}
 saludo()
