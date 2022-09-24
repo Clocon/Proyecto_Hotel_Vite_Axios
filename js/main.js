@@ -26,7 +26,7 @@ const saludo =()=>{
   const cabeceroImg =document.getElementById("cabecero")
   const buenosX =document.querySelector("#saludo")
   const saludoColor =document.getElementById("saludo")
-
+  document.querySelector("#fechaHora").innerHTML = today
   if(hora>=4 && hora<12){
     buenosX.innerHTML="Buenos días"
     saludoColor.style.color ="#9a993";
@@ -44,13 +44,29 @@ const saludo =()=>{
     saludoColor.style.color ="#654"
     cabeceroImg.style.backgroundImage = "url(../img/bNoches.jpg)"
     cabeceroImg.style.backgroundSize = "cover"
-}}
+}
+setInterval("saludo()",1000)
+}
+
 saludo()
 
 document.querySelector("#check").innerHTML="Checking ONLINE"
-const el = document.getElementById("check")
-el.onclick= ()=>{
-  console.log("hola mundo")
-  window.alert("Quieres continuar?")
-}
+const buttomCheck = document.getElementById("check")
+buttomCheck.onclick= ()=>{
+  const url ="https://practica-eoi.alexdw.com/reservations"
+  const orderId = window.prompt("Quieres continuar?")
+  const lastname = window.prompt("quienes somos?")
+
+/*   fetch(url, {
+    method: 'POST',
+    dataType: 'json',
+    success : function(response){
+      console.log("hola")
+    })
+    .then(res =>res.json())
+    .catch(error => console.error("Error",error))
+    .then(response => console.log("Realziado con exito", response)) */
+  }
+
+  
 
