@@ -51,5 +51,6 @@ document.querySelector("#check").innerHTML="Checking ONLINE"
 const el = document.getElementById("check")
 el.onclick= ()=>{
   console.log("hola mundo")
+  window.alert("Quieres continuar?")
 }
 
