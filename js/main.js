@@ -68,13 +68,13 @@ buttomCheck.onclick= ()=>{
       for(i=0;i<noches.length;i++){
         total +=noches[i].price
       }
-      console.log(`Check-in realizado con éxito para su reserva desde el ${noches[0].date} al ${noches[noches.length-1].date}. La reserva aún no ha sido abonada, tendrá que abonar ${total}€ en su entrada al hotel`)
+      window.alert(`Check-in realizado con éxito para su reserva desde el ${noches[0].date} al ${noches[noches.length-1].date}. La reserva aún no ha sido abonada, tendrá que abonar ${total}€ en su entrada al hotel`)
       return 
     }
-    console.log(`Check-in realizado con éxito para su reserva desde el ${noches[0].date} al ${noches[noches.length-1].date}`)
+    window.alert(`Check-in realizado con éxito para su reserva desde el ${noches[0].date} al ${noches[noches.length-1].date}`)
   })
   .catch(function () {
-    console.log("Datos incorrecto, inténtalo de nuevo más tarde");
+    window.alert("Datos incorrecto, inténtalo de nuevo más tarde");
   })
 }
 
