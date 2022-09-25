@@ -69,7 +69,7 @@ buttomCheck.onclick= ()=>{
     window.alert(`Check-in realizado con éxito para su reserva desde el ${noches[0].date} al ${noches[noches.length-1].date}`)
     if(pago === true){
       return
-    }else 
+    }
     for(i=0;i<noches.length;i++){
       total +=noches[i].price
     }
