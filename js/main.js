@@ -22,8 +22,9 @@ GET("https://practica-eoi.alexdw.com/contents")
 
 
 const saludo =()=>{
-  const fechaHora=new Date()
-  const hora=new Date().getHours()
+  const date =new Date()
+  const hora=date.getHours()
+  const fechaHora=date.getDate()+ "/" +date.getMonth()+"/"+date.getFullYear()+ " " +hora+":"+date.getMinutes()+":"+date.getSeconds()
   const cabeceroImg =document.getElementById("cabecero")
   const buenosX =document.querySelector("#saludo")
   const saludoColor =document.getElementById("saludo")
