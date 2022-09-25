@@ -20,13 +20,14 @@ async function GET(url){
 } 
 GET("https://practica-eoi.alexdw.com/contents")
 
+
 const saludo =()=>{
-  const today=new Date()
-  const hora=today.getHours()
+  const fechaHora=new Date()
+  const hora=new Date().getHours()
   const cabeceroImg =document.getElementById("cabecero")
   const buenosX =document.querySelector("#saludo")
   const saludoColor =document.getElementById("saludo")
-  document.querySelector("#fechaHora").innerHTML = today
+  document.querySelector("#fechaHora").innerHTML = fechaHora
   if(hora>=4 && hora<12){
     buenosX.innerHTML="Buenos días"
     saludoColor.style.color ="#9a993";
@@ -47,26 +48,35 @@ const saludo =()=>{
 }
 setInterval("saludo()",1000)
 }
-
 saludo()
+
 
 document.querySelector("#check").innerHTML="Checking ONLINE"
 const buttomCheck = document.getElementById("check")
 buttomCheck.onclick= ()=>{
   const url ="https://practica-eoi.alexdw.com/reservations"
-  const orderId = window.prompt("Quieres continuar?")
-  const lastname = window.prompt("quienes somos?")
-
-/*   fetch(url, {
-    method: 'POST',
-    dataType: 'json',
-    success : function(response){
-      console.log("hola")
-    })
-    .then(res =>res.json())
-    .catch(error => console.error("Error",error))
-    .then(response => console.log("Realziado con exito", response)) */
-  }
+  const orderIdP = window.prompt("Dime tu número de reserva")
+  const lastnameP = window.prompt("Dime tu primer apellido")
+  axios.post(url, {
+    orderId: orderIdP,
+    lastname: lastnameP
+  })
+  .then(function (response) {
+    const noches =response.data.reservations.nights
+    if(response.data.reservations.paid === false){
+      let total=0
+      for(i=0;i<noches.length;i++){
+        total +=noches[i].price
+      }
+      console.log(`Check-in realizado con éxito para su reserva desde el ${noches[0].date} al ${noches[noches.length-1].date}. La reserva aún no ha sido abonada, tendrá que abonar ${total}€ en su entrada al hotel`)
+      return 
+    }
+    console.log(`Check-in realizado con éxito para su reserva desde el ${noches[0].date} al ${noches[noches.length-1].date}`)
+  })
+  .catch(function () {
+    console.log("Datos incorrecto, inténtalo de nuevo más tarde");
+  })
+}
 
   
 
