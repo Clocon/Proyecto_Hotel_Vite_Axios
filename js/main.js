@@ -70,7 +70,7 @@ buttomCheck.onclick= ()=>{
     if(pago === true){
       return
     }
-    for(let i=0;i<noches.length;i++){
+    for(i=0;i<noches.length;i++){
       total +=noches[i].price
     }
     window.alert(`La reserva aún no ha sido abonada, tendrá que abonar ${total}€ en su entrada al hotel`)
