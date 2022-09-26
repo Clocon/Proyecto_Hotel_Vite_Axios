@@ -19,8 +19,6 @@ async function GET(url){
   } 
 } 
 GET("https://practica-eoi.alexdw.com/contents")
-
-
 const saludo =()=>{
   const date =new Date()
   const hora=date.getHours()
@@ -70,7 +68,7 @@ buttomCheck.onclick= ()=>{
     if(pago === true){
       return
     }
-    for(i=0;i<noches.length;i++){
+    for(let i=0;i<noches.length;i++){
       total +=noches[i].price
     }
     window.alert(`La reserva aún no ha sido abonada, tendrá que abonar ${total}€ en su entrada al hotel`)
