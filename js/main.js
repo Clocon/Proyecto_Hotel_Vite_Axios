@@ -47,7 +47,7 @@ const saludo =()=>{
     cabeceroImg.style.backgroundImage = "url(../img/bNoches.jpg)"
     cabeceroImg.style.backgroundSize = "cover"
 }
-setInterval("saludo()",1000)
+setInterval(saludo,1000)
 }
 saludo()
 
