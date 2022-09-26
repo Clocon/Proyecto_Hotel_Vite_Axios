@@ -1,3 +1,4 @@
+import axios from 'axios'
 async function GET(url){
   try{ 
   const request =await fetch(url)
