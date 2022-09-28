@@ -79,5 +79,20 @@ buttomCheck.onclick= ()=>{
   })
 }
 
-  
+document.querySelector("#carrusel").innerHTML="Visita Nuestro Polo"  
+const buttomConoce = document.getElementById("carrusel")
+buttomConoce.onclick= ()=>{
+  const carrusel =document.querySelector("#historia-polo")
+  carrusel.innerHTML="";
+  carrusel.innerHTML=(`<div id="fotos-polo"><button id="pasar-foto">Pasar foto</button></div>`)
+}
 
+const pasaFoto =document.querySelector("#pasar-foto")
+pasaFoto.onclick=()=>{
+  let counter = 0
+  const img =document.getElementById("historia-polo");
+  if (counter === 0){
+    img.style.background='url(../img/fondo.jpg)'
+  }
+
+}
