@@ -135,11 +135,14 @@ h1{
 }
 
 .fondo{
-  background-image: url(../img/fondo.jpg);
   height: 100%;
   background-position:left;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.img-fondo{
+  background-image: url(../img/fondo.jpg);
 }
 
 

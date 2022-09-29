@@ -79,20 +79,27 @@ buttomCheck.onclick= ()=>{
   })
 }
 
+const img =document.getElementById("historia-polo");
 document.querySelector("#carrusel").innerHTML="Visita Nuestro Polo"  
 const buttomConoce = document.getElementById("carrusel")
 buttomConoce.onclick= ()=>{
-  const carrusel =document.querySelector("#historia-polo")
-  carrusel.innerHTML="";
-  carrusel.innerHTML=(`<div id="fotos-polo"><button id="pasar-foto">Pasar foto</button></div>`)
+  const limpia =document.querySelector("#historia-polo")
+  limpia.innerHTML="";
+  img.style.backgroundImage = "url(../img/poloMalaga.jpg)"
+  limpia.innerHTML=(`<a id="pasar-foto" class="hover btn2" href="#">Pasar foto</a>`)
 }
 
-const pasaFoto =document.querySelector("#pasar-foto")
-pasaFoto.onclick=()=>{
+function cambiarFoto(){
   let counter = 0
-  const img =document.getElementById("historia-polo");
   if (counter === 0){
-    img.style.background='url(../img/fondo.jpg)'
+    img.style.backgroundImage = "url(../img/bNoches.jpg)"
+    counter ++
+    console.log(counter)
   }
+}
 
+const pasarFoto =document.getElementById("pasar-foto")
+pasarFoto.onclick=()=>{
+  console.log("hola mundo")
+cambiarFoto()
 }
