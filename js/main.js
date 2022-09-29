@@ -14,6 +14,7 @@ async function GET(url){
   document.querySelector("#gym").innerHTML=data.fitness.title
   document.querySelector("#gym-des").innerHTML=data.fitness.description
   document.querySelector("#pie").innerHTML=data.footer.text
+  document.querySelector("#carrusel").innerHTML="Visita Nuestro Polo"
   }
   catch{
     console.warn("No ha sido posible descargar la información")
@@ -79,27 +80,25 @@ buttomCheck.onclick= ()=>{
   })
 }
 
+const carruselFotos = ["url(../img/poloMalaga.jpg)","url(../img/museoAutos.jpeg)","url(../img/museoRuso.jpg)"]
+
 const img =document.getElementById("historia-polo");
 document.querySelector("#carrusel").innerHTML="Visita Nuestro Polo"  
 const buttomConoce = document.getElementById("carrusel")
+let counter = -1
 buttomConoce.onclick= ()=>{
-  const limpia =document.querySelector("#historia-polo")
-  limpia.innerHTML="";
-  img.style.backgroundImage = "url(../img/poloMalaga.jpg)"
-  limpia.innerHTML=(`<a id="pasar-foto" class="hover btn2" href="#">Pasar foto</a>`)
-}
-
-function cambiarFoto(){
-  let counter = 0
-  if (counter === 0){
-    img.style.backgroundImage = "url(../img/bNoches.jpg)"
+  if (counter === -1){
+    buttomConoce.innerHTML="Pasar Foto"
+    document.querySelector(".borraH").innerHTML=""
+    document.querySelector(".borraP").innerHTML=""
     counter ++
-    console.log(counter)
   }
-}
-
-const pasarFoto =document.getElementById("pasar-foto")
-pasarFoto.onclick=()=>{
-  console.log("hola mundo")
-cambiarFoto()
+  for(counter;counter<carruselFotos.length;counter++){
+    img.style.backgroundImage = carruselFotos[counter]
+    counter++
+    if (counter===carruselFotos.length ){
+      counter=0
+    }
+    return
+  }
 }
